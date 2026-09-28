@@ -1,0 +1,19 @@
+{
+  "category": "kinetic-type",
+  "duration_s": 10,
+  "fps": 30,
+  "canvas": { "width": 1920, "height": 1080 },
+  "style": "warm editorial, light paper, one marker accent",
+  "palette": ["#f4efe6", "#1c1a17", "#6b645a", "#f2b632"],
+  "font": { "display": "Fraunces 600", "ui": "Inter" },
+  "export": "mp4",
+  "asset_needs": [],
+  "fallback_note": "Planned as webpage capture of https://www.vsointernational.org/; the host is blocked by this environment's egress policy, so the piece degraded to asset-free kinetic type. Palette is not VSO brand palette.",
+  "brief": "Type-only intro. One motif: words rise, then a marker sweeps under the one word that carries the line. Scenes 1-2 share the head 'People who' and swap the tail, so national and international volunteers read as one idea. Scene 3 names the method. Scene 4 is a plain VSO lockup and URL, held for ~1.4s.",
+  "scenes": [
+    { "t": [0, 2.6], "role": "hook", "text": "People who know the place.", "emphasis": ["know"] },
+    { "t": [2.6, 5.5], "role": "build", "text": "People who bring a skill.", "emphasis": ["skill"] },
+    { "t": [5.55, 7.9], "role": "punch", "text": "Working on it together.", "emphasis": ["together"] },
+    { "t": [7.9, 10], "role": "resolve", "text": "VSO / Fighting poverty through volunteering / vsointernational.org" }
+  ]
+}

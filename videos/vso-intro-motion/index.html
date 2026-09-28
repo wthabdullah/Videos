@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, height=1080">
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      @font-face {
+        font-family: "Fraunces";
+        src: url("assets/fonts/fraunces-latin.woff2") format("woff2");
+        font-weight: 600;
+        font-display: block;
+      }
+      @font-face {
+        font-family: "Inter";
+        src: url("assets/fonts/inter-latin.woff2") format("woff2");
+        font-weight: 100 900;
+        font-display: block;
+      }
+      :root {
+        --paper: #f4efe6;
+        --ink: #1c1a17;
+        --muted: #6b645a;
+        --marker: #f2b632;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: var(--paper);
+      }
+      #stage {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: "Fraunces", Georgia, serif;
+      }
+      #frame {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 120px 160px;
+      }
+      /* every scene group shares one grid cell so they stack in the centre */
+      .group {
+        grid-area: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        text-align: center;
+      }
+      .line {
+        font-size: 128px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+        white-space: nowrap;
+      }
+      .w {
+        display: inline-block;
+      }
+      .tails {
+        display: inline-grid;
+        justify-items: start;
+      }
+      .tail {
+        grid-area: 1 / 1;
+      }
+      .em {
+        position: relative;
+        display: inline-block;
+      }
+      .mark {
+        position: absolute;
+        left: -0.06em;
+        right: -0.06em;
+        bottom: 0.1em;
+        height: 0.34em;
+        background: var(--marker);
+        transform: scaleX(0);
+        transform-origin: left center;
+      }
+      .tx {
+        position: relative;
+      }
+      #g2,
+      #lockup {
+        opacity: 0;
+        visibility: hidden;
+      }
+      #lockup .wordmark {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: 220px;
+        letter-spacing: -0.04em;
+        line-height: 1;
+      }
+      #lockup .rule {
+        width: 180px;
+        height: 8px;
+        background: var(--marker);
+        transform-origin: center;
+      }
+      #lockup .tagline {
+        font-size: 64px;
+        font-weight: 600;
+        letter-spacing: -0.015em;
+      }
+      #lockup .url {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 36px;
+        color: var(--muted);
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </head>
+  <body>
+    <div data-hf-id="hf-33ip" id="stage" data-composition-id="main" data-start="0" data-duration="10" data-fps="30" data-width="1920" data-height="1080">
+      <div data-hf-id="hf-n1ry" id="frame" class="clip" data-start="0" data-duration="10" data-track-index="0">
+        <!-- Scenes 1-2: shared head, swapping tail -->
+        <div data-hf-id="hf-jtkr" id="g1" class="group">
+          <p data-hf-id="hf-j7r1" class="line">
+            <span data-hf-id="hf-p02y" class="w h1">People</span> <span data-hf-id="hf-wgb7" class="w h1">who</span>
+            <span data-hf-id="hf-ee1q" class="tails">
+              <span data-hf-id="hf-32go" id="tailA" class="tail"><span data-hf-id="hf-fkh1" class="w ta"><span data-hf-id="hf-3vh7" class="em"><span data-hf-id="hf-yiek" id="markA" class="mark"></span><span data-hf-id="hf-jnba" class="tx">know</span></span></span>
+                <span data-hf-id="hf-2wxo" class="w ta">the</span> <span data-hf-id="hf-nvsm" class="w ta">place.</span></span>
+              <span data-hf-id="hf-bqcj" id="tailB" class="tail"><span data-hf-id="hf-4dau" class="w tb">bring</span> <span data-hf-id="hf-h1qt" class="w tb">a</span>
+                <span data-hf-id="hf-jil2" class="w tb"><span data-hf-id="hf-luu3" class="em"><span data-hf-id="hf-9dw7" id="markB" class="mark"></span><span data-hf-id="hf-q4us" class="tx">skill.</span></span></span></span>
+            </span>
+          </p>
+        </div>
+
+        <!-- Scene 3 -->
+        <div data-hf-id="hf-8y34" id="g2" class="group">
+          <p data-hf-id="hf-tjip" class="line">
+            <span data-hf-id="hf-ngvh" class="w t2">Working</span> <span data-hf-id="hf-12sf" class="w t2">on</span> <span data-hf-id="hf-dgnf" class="w t2">it</span>
+            <span data-hf-id="hf-6bs6" class="w t2"><span data-hf-id="hf-lgj2" class="em"><span data-hf-id="hf-386e" id="markC" class="mark"></span><span data-hf-id="hf-4j9j" class="tx">together.</span></span></span>
+          </p>
+        </div>
+
+        <!-- Scene 4: lockup -->
+        <div data-hf-id="hf-01jd" id="lockup" class="group">
+          <div data-hf-id="hf-ebm9" class="wordmark">VSO</div>
+          <div data-hf-id="hf-a46i" class="rule"></div>
+          <div data-hf-id="hf-sq5y" class="tagline">Fighting poverty through volunteering</div>
+          <div data-hf-id="hf-wd5r" class="url">vsointernational.org</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      const rise = { y: 48, autoAlpha: 0 };
+      const settle = { y: 0, autoAlpha: 1, ease: "power3.out", duration: 0.55 };
+
+      // hidden-until-entrance states for #g2, #lockup and the marks live in CSS
+
+      // Scene 1 — hook: "People who know the place."
+      tl.fromTo(".h1", rise, { ...settle, stagger: 0.12 }, 0.1);
+      tl.fromTo(".ta", rise, { ...settle, stagger: 0.1 }, 0.45);
+      tl.fromTo("#markA", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 1.2);
+
+      // Scene 2 — the tail swaps, the head stays: "People who bring a skill."
+      tl.fromTo("#tailA", { y: 0, autoAlpha: 1 }, { y: -48, autoAlpha: 0, duration: 0.4, ease: "power2.in" }, 2.6);
+      tl.fromTo(".tb", rise, { ...settle, stagger: 0.1 }, 2.85);
+      tl.fromTo("#markB", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 3.55);
+
+      // exit scenes 1-2
+      tl.fromTo("#g1", { y: 0, autoAlpha: 1 }, { y: -40, autoAlpha: 0, duration: 0.45, ease: "power2.in" }, 5.1);
+
+      // Scene 3 — "Working on it together."
+      tl.fromTo("#g2", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.01 }, 5.55);
+      tl.fromTo(".t2", rise, { ...settle, stagger: 0.11 }, 5.55);
+      tl.fromTo("#markC", { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "power2.inOut" }, 6.45);
+      tl.fromTo("#g2", { y: 0, autoAlpha: 1 }, { y: -40, autoAlpha: 0, duration: 0.45, ease: "power2.in", immediateRender: false }, 7.45);
+
+      // Scene 4 — lockup and hold
+      tl.fromTo("#lockup", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.01 }, 7.9);
+      tl.fromTo("#lockup .wordmark", { scale: 0.9, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.7, ease: "expo.out" }, 7.9);
+      tl.fromTo("#lockup .rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "power2.inOut" }, 8.25);
+      tl.fromTo("#lockup .tagline", rise, { ...settle }, 8.4);
+      tl.fromTo("#lockup .url", rise, { ...settle }, 8.65);
+      tl.to({}, { duration: 0.01 }, 9.99);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
