@@ -2,7 +2,8 @@
 <html lang="en-GB"><head><meta charset="utf-8"><title>Waste to Wealth</title>
 <link rel="stylesheet" href="style.css">
 <script>/* ?print adds 3 mm bleed; ?final hides empty photo slots */
-for (const k of ['print','final']) if (new URLSearchParams(location.search).has(k)) document.documentElement.classList.add(k);</script>
+for (const k of ['print','final']) if (new URLSearchParams(location.search).has(k)) document.documentElement.classList.add(k);
+if (document.documentElement.classList.contains('print')) document.write('<style>@page{size:154mm 216mm;margin:0}</style>');</script>
 </head><body>
 
 <svg width="0" height="0" style="position:absolute"><defs>
@@ -46,9 +47,9 @@ for (const k of ['print','final']) if (new URLSearchParams(location.search).has(
   <div class="tab l" style="top:24mm"><span>Why it matters</span></div>
   <div class="p2top">
     <div class="mosaic">
-      <div class="duo"><div class="photo" style="background-image:url(img/dump.jpg)"></div><span class="lab">Dumps that rot</span></div>
-      <div class="duo"><div class="photo" style="background-image:url(img/drain.jpg)"></div><span class="lab">Blocked drains</span></div>
-      <div class="duo"><div class="photo" style="background-image:url(img/burn.jpg)"></div><span class="lab">Smoke we breathe</span></div>
+      <div class="duo"><div class="photo" style="background-image:url(img/duo-dump.jpg)"></div><span class="lab">Dumps that rot</span></div>
+      <div class="duo"><div class="photo" style="background-image:url(img/duo-drain.jpg)"></div><span class="lab">Blocked drains</span></div>
+      <div class="duo"><div class="photo" style="background-image:url(img/duo-burn.jpg)"></div><span class="lab">Smoke we breathe</span></div>
     </div>
     <div class="ttl">
       <span class="eyebrow">Why it matters</span>
@@ -87,12 +88,14 @@ for (const k of ['print','final']) if (new URLSearchParams(location.search).has(
   <div class="body">
     <div class="card">
       <span class="kicker">Before you take a plastic item, circle one</span>
-      <div class="qs" style="margin-top:1.4mm">
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="t">Do I really need it?</span></div>
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="t">Will I use it more than once?</span></div>
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="t">Can it be recycled where I live?</span></div>
+      <div class="qs" style="margin-top:1mm">
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">1</span><span class="t">Do I need it?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">2</span><span class="t">Does it have to come in this packaging?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">3</span><span class="t">Do I need a new bag or container for it?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">4</span><span class="t">Can I use this item many times?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">5</span><span class="t">If I throw it away, can it be recycled locally?</span></div>
       </div>
-      <div class="rule1"><b>Any cross?</b> Leave it on the shelf. Better still, bring your own bag, bottle or box.</div>
+      <div class="rule1"><b>Any cross?</b> Leave it on the shelf.</div>
     </div>
 
     <div class="refuse">
@@ -206,7 +209,7 @@ for (const k of ['print','final']) if (new URLSearchParams(location.search).has(
         <div class="td"><span class="dot" style="background:#8f8089"></span>Everything else</div><div class="td"><span class="blank"></span></div><div class="td"><span class="na">–</span></div><div class="td"><span class="na">–</span></div>
         <div class="td tot" style="grid-column:1/4;justify-content:flex-end">My week of recyclables is worth</div><div class="td tot box"><span class="blank"></span></div>
       </div>
-      <div class="tnote"><b>No scales?</b> The scrap dealer weighs it when you sell. Prices change, so write them in pencil.</div>
+      <div class="tnote">Worth = kg × price, added up for plastic, paper, glass and metal. Prices change, so write yours in pencil.</div>
     </div>
 
     <div class="dealer">
@@ -250,7 +253,7 @@ for (const k of ['print','final']) if (new URLSearchParams(location.search).has(
         <p>Form a team. Map who already collects waste, who cleans up, and who could help.</p></div></div>
       <div class="stop s2"><div class="no">2</div><div class="tx">
         <div class="top"><h3>Show</h3><span>Weeks 3–4</span></div>
-        <p>With permission, put out model bins in the three colours. Sort a heap of mixed waste in public.</p></div></div>
+        <p>With permission, put out model bins in the three colours. Sort a heap of mixed waste in public, and explain why sorting is everyone’s responsibility, morally and legally.</p></div></div>
       <div class="stop s3"><div class="no">3</div><div class="tx">
         <div class="top"><h3>Coordinate</h3><span>Weeks 5–6</span></div>
         <p>Meet the local authority, collectors, shops, schools and scrap dealers. Agree who keeps each area clean.</p></div></div>

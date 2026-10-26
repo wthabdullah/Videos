@@ -15,6 +15,6 @@ const path = require('path');
   }));
   console.log(JSON.stringify(rep));
   const bleed=(process.argv[4]||'').includes('print'); // 3 mm bleed each side
-  await pg.pdf({path: out, width: bleed?'154mm':'148mm', height: bleed?'216mm':'210mm', printBackground:true, preferCSSPageSize:!bleed});
+  await pg.pdf({path: out, width: bleed?'154mm':'148mm', height: bleed?'216mm':'210mm', printBackground:true, preferCSSPageSize:true});
   await b.close();
 })();
