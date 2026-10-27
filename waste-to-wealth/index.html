@@ -8,7 +8,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
-<symbol id="straw" viewBox="0 0 24 24"><path d="M8 21L14 4h4"/><path d="M9.6 16.6l3.2 1.1"/></symbol>
+<symbol id="straw" viewBox="0 0 24 24"><path d="M10 21.5V11L14 4.5h4.5" stroke-width="4.2"/><path d="M10 21.5V11L14 4.5h4.5" stroke="#fffdf9" stroke-width="1.8"/><path d="M8.4 13.4h3.2M8.4 15.6h3.2" stroke-width="1"/></symbol>
 <symbol id="cup" viewBox="0 0 24 24"><path d="M5.5 9h13l-1.5 11h-10z"/><path d="M4.5 9h15"/><path d="M12 9V3.5h4"/></symbol>
 <symbol id="bottle" viewBox="0 0 24 24"><path d="M10 3h4v3l2 3v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3V3z"/><path d="M8 13h8"/></symbol>
 <symbol id="wrap" viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="8" rx="1.6"/><path d="M7 12L3 9v6l4-3zM17 12l4-3v6l-4-3z"/></symbol>
@@ -43,7 +43,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 2: WHERE DOES IT GO ============ -->
 <section class="page p2"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#e7d9db"></svg>
   <div class="tab l" style="top:24mm"><span>Why it matters</span></div>
   <div class="p2head">
     <span class="eyebrow">Why it matters</span>
@@ -74,7 +74,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 3: STEP 1 ============ -->
 <section class="page step"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#e7d9db"></svg>
   <div class="tab r" style="top:58mm"><span>Step 1 · Refuse</span></div>
   <div class="shead">
     <div class="big">1</div>
@@ -132,7 +132,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 4: STEP 2 ============ -->
 <section class="page step"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#e7d9db"></svg>
   <div class="tab l" style="top:90mm"><span>Step 2 · Sort</span></div>
   <div class="shead">
     <div class="big">2</div>
@@ -184,7 +184,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 5: STEP 3 ============ -->
 <section class="page step"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#e7d9db"></svg>
   <div class="tab r" style="top:122mm"><span>Step 3 · Track</span></div>
   <div class="shead">
     <div class="big">3</div>
@@ -231,7 +231,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 6: STREET PLAN ============ -->
 <section class="page dark"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#6d2c5f"></svg>
   <div class="dhead">
     <span class="eyebrow">From one home to one street</span>
     <h1>The <em>8-week</em> action plan.</h1>
@@ -265,7 +265,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 7: LAW ============ -->
 <section class="page law7"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#e7d9db"></svg>
   <div class="tab r" style="top:172mm"><span>The law</span></div>
   <div class="hdr">
     <div class="band"><svg class="tear"><use href="#tear-b" fill="#5d164d"/></svg></div>
@@ -291,7 +291,7 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 
 <!-- ============ PAGE 8: PLEDGE AND CLOSE ============ -->
 <section class="page p8"><div class="trim">
-  <div class="bl dots"></div>
+  <svg class="bl dots-v" data-c="#e7d9db"></svg>
   <div class="pledge">
     <div class="champ">Waste<br>champion</div>
     <span class="kicker">My pledge</span>
@@ -318,6 +318,12 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 </div></section>
 
 <script>
+/* dot texture: one vector circle per dot. Chrome flattens CSS gradients and SVG patterns
+   into 72 dpi images in the PDF, which print blurry. */
+document.querySelectorAll('.dots-v').forEach(sv=>{
+  const r=sv.getBoundingClientRect(),step=4.2*96/25.4,c=sv.dataset.c;let h='';
+  for(let y=step/2;y<r.height;y+=step)for(let x=step/2;x<r.width;x+=step)h+=`<circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="1.2" fill="${c}"/>`;
+  sv.innerHTML=h});
 /* draw the dotted route on page 6 through the centre of each numbered stop */
 function route(){document.querySelectorAll('.snake').forEach(sn=>{
   const r=sn.getBoundingClientRect(),p=sn.querySelector('path');
