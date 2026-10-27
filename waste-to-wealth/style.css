@@ -392,3 +392,68 @@ svg.fork{display:block;width:100%;height:7mm;margin:-.2mm 0 -1mm}
 /* duotone is baked into img/duo-*.jpg: CSS blend modes drop out of the bleed PDF */
 .duo .photo{filter:none}
 .duo::before,.duo::after{display:none}
+
+/* ===== v9.1: full-colour photos, page 2 layout, page 6 plan ===== */
+.p2head{flex:none;padding:11mm 8mm 0 14mm;position:relative;z-index:2}
+.p2head .eyebrow{background:var(--plum);color:#fff}
+.p2head h1{font-size:33pt;font-weight:800;letter-spacing:-.03em;line-height:.98;color:var(--plum);margin:3mm 0 2.4mm}
+.p2head p.sub{font-size:9.8pt;line-height:1.38;max-width:100mm}
+.p2band{position:relative;flex:none;margin-top:6mm;padding:5mm 8mm 5mm 14mm;color:#fff;z-index:1}
+.p2band .bg{position:absolute;left:calc(-1*var(--b));right:calc(-1*var(--b));top:0;bottom:0;background:var(--plum)}
+.p2band .bg::after{content:"";position:absolute;right:-18mm;top:-22mm;width:60mm;height:60mm;border-radius:50%;border:.35mm dashed rgba(255,255,255,.22)}
+.chip-o{position:relative;display:inline-block;background:var(--orange);color:var(--plum);font-weight:800;font-size:7.6pt;letter-spacing:.14em;text-transform:uppercase;padding:1.5mm 3mm;border-radius:1.4mm}
+.trip{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:2.6mm;margin-top:3.4mm}
+.trip figure{margin:0}
+.trip .photo{height:54mm;border-radius:2mm}
+.trip figcaption{font-size:8.4pt;line-height:1.25;margin-top:1.8mm;color:#f1e1ec}
+.trip figcaption b{color:#fff;display:block;font-size:9.2pt}
+.p2 .p2bot{padding:5mm 8mm 0 14mm;gap:3.4mm}
+.p2 .fate2 h2{font-size:14pt}
+.p2 .outs{grid-template-columns:1fr 1fr;flex:1;min-height:0}
+.p2 .outs .it{padding:2.4mm 3mm}
+
+/* page 3: small red badge, icon stays whole */
+.icons .ring::after{left:auto;right:-1.2mm;top:-1.2mm;width:4.6mm;height:4.6mm;border:.45mm solid var(--kraft);border-radius:50%;transform:none;
+  background:linear-gradient(45deg,transparent 42%,#fff 42% 58%,transparent 58%) center/56% 56% no-repeat,linear-gradient(-45deg,transparent 42%,#fff 42% 58%,transparent 58%) center/56% 56% no-repeat,var(--red)}
+
+/* page 4 and 5 photos */
+.respect .photo{background-image:url(img/worker.jpg);background-position:center 28%;right:auto;width:52%}
+.respect::before{background:linear-gradient(90deg,rgba(74,17,64,0) 0%,rgba(74,17,64,0) 40%,rgba(74,17,64,1) 53%)}
+.respect{background:var(--plum)}
+.respect .tx{width:50%}
+.dealer-ph{min-height:36mm;border-radius:3mm;background-image:url(img/dealer.jpg);background-position:38% 45%;background-size:cover}
+
+/* page 6 */
+.p6body{padding-top:4.4mm;gap:3.2mm}
+.p6ph{height:40mm;flex:none;border-radius:3mm;background-image:url(img/bins-volunteers.jpg);background-position:center 45%;position:relative;overflow:hidden}
+.p6ph .cap{position:absolute;left:2.6mm;bottom:2.6mm;background:rgba(74,17,64,.88);color:#fff;font-size:7.6pt;font-weight:600;padding:1mm 2.4mm;border-radius:1.2mm}
+.plan{display:flex;flex-direction:column;gap:2.2mm;position:relative;flex:1;min-height:0}
+.plan::before{content:"";position:absolute;left:5.6mm;top:4mm;bottom:4mm;border-left:.5mm dotted var(--orange)}
+.stg{display:grid;grid-template-columns:11.2mm 1fr;gap:2.6mm;align-items:start;position:relative}
+.stg .no{width:11.2mm;height:11.2mm;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13pt;border:.8mm solid var(--plum)}
+.stg .tx{background:#fff;border-radius:3mm;padding:2.4mm 4mm 2.6mm}
+.stg .top{display:flex;align-items:baseline;gap:2.4mm;margin-bottom:.8mm}
+.stg h3{font-size:11.4pt;text-transform:uppercase;letter-spacing:.02em}
+.stg .top span{font-size:6.8pt;letter-spacing:.14em;font-weight:700;color:var(--mag);text-transform:uppercase}
+.stg ul{list-style:none;display:flex;flex-direction:column;gap:.7mm}
+.stg li{font-size:8.6pt;line-height:1.3;padding-left:3.2mm;position:relative}
+.stg li::before{content:"";position:absolute;left:0;top:1.6mm;width:1.5mm;height:1.5mm;border-radius:50%;background:var(--orange)}
+.m6{flex:none;background:var(--orange);color:var(--plum);border-radius:3mm;padding:2.8mm 4.4mm;font-size:9.2pt;line-height:1.35}
+/* fit: page 6, page 7, page 3 badge */
+.dark .dhead{padding-top:10mm}
+.dark .dhead h1{font-size:28pt;margin:2.6mm 0 2mm}
+.dark .dhead p.sub{font-size:9.2pt}
+.p6body{padding-top:3.6mm;gap:2.6mm}
+.p6ph{height:31mm;background-position:center 40%}
+.plan{gap:1.8mm}
+.stg .tx{padding:2mm 3.8mm 2.2mm}
+.stg h3{font-size:10.8pt}
+.stg li{font-size:8.3pt;line-height:1.27}
+.m6{padding:2.4mm 4mm;font-size:8.8pt}
+.icons .ring::after{width:4mm;height:4mm;right:-.9mm;top:-.9mm}
+.page.law7 .body{gap:3.4mm;padding-top:6mm}
+.page.law7 .lawgrid{gap:3mm}
+.page.law7 .law{padding:3.2mm 3.8mm 3.4mm}
+.page.law7 .law .fine{font-size:13pt;margin-top:1.6mm}
+.page.law7 .home-line{padding:3.4mm 4.4mm;font-size:9.6pt}
+.p6ph{height:37mm}
