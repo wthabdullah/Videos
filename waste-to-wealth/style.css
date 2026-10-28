@@ -574,3 +574,7 @@ svg.fork{display:block;width:100%;height:7mm;margin:-.2mm 0 -1mm}
 .hot p{font-size:8.4pt}
 .hot p strong{font-size:9pt;margin-top:.8mm}
 .hot .use-l{margin-top:1.8mm;margin-bottom:1mm}
+/* page 2: equal side margins, like every other page */
+.p2head{padding-left:8mm;padding-right:8mm}
+.p2band{padding-left:8mm;padding-right:8mm}
+.p2 .p2bot{padding-left:8mm;padding-right:8mm}
