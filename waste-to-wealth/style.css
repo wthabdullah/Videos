@@ -480,3 +480,40 @@ svg.fork{display:block;width:100%;height:7mm;margin:-.2mm 0 -1mm}
 .dots{-webkit-mask-image:none;mask-image:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ccircle cx='8' cy='8' r='1.25' fill='%235d164d' fill-opacity='.10'/%3E%3C/svg%3E");background-size:4.2mm 4.2mm}
 .page.dark .dots{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Ccircle cx='8' cy='8' r='1.25' fill='%23ffffff' fill-opacity='.08'/%3E%3C/svg%3E")}
 .dots-v{width:calc(100% + 2*var(--b));height:calc(100% + 2*var(--b));pointer-events:none}
+
+/* ===== v9.4 ===== */
+/* cover: street photo */
+.cover .pic{background:url(img/cover-street.png) 45% center/cover}
+
+/* page 2: four outcomes as one row of labelled icons */
+.p2 .outs{display:grid;grid-template-columns:repeat(4,1fr);gap:2.6mm;flex:1;min-height:0}
+.p2 .outs .it{flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:2.4mm;padding:3.4mm 2mm}
+.p2 .outs .ic{width:13mm;height:13mm;font-size:18pt}
+.p2 .outs b{font-size:9.6pt}
+.p2 .money{font-size:12.4pt;padding:3.4mm 4.6mm}
+
+/* page 3: centred numbers, badge icons, hot food box */
+.qs .num{line-height:1;padding:0;text-align:center;font-variant-numeric:tabular-nums}
+.qs .r{padding:2mm 0}
+.qs .t{font-size:10.6pt}
+.icons{grid-template-columns:repeat(5,1fr)}
+.icons .ring{width:12mm;height:12mm;font-size:16pt}
+.icons .ring::after{display:none}
+.icons svg.xb{position:absolute;right:-1.4mm;top:-1.4mm;width:4.8mm;height:4.8mm}
+.icons .ic{font-size:7.8pt}
+.hot{display:grid;grid-template-columns:52mm 1fr;background:var(--mag);color:#fff;border-radius:3.6mm;overflow:hidden;flex:1;min-height:0}
+.hot-ph{border-radius:0;background-image:url(img/hot-food.png);background-position:58% 50%;min-height:34mm}
+.hot-tx{padding:4.2mm 5mm;display:flex;flex-direction:column;justify-content:center}
+.hot h3{color:#fff;font-size:14pt;line-height:1.1;margin-bottom:2mm}
+.hot p{font-size:9.2pt;line-height:1.38;color:#fbeff8}
+.hot .instead{margin-top:2.8mm;align-self:flex-start;background:var(--orange);color:var(--plum);font-weight:800;font-size:9pt;line-height:1.25;padding:1.6mm 3mm;border-radius:2mm}
+
+/* page 4: bins as equal columns, 'what to do' boxes start on one line */
+.bins3{align-items:stretch}
+.bin .tub{gap:0}
+.bin .tub h4{margin-bottom:1.6mm}
+.bin .tub .ex{min-height:15.6mm}
+.bin .tub .do{flex:1;margin-top:2mm}
+.qs .num{padding-top:.32mm}
+.icons .ring{font-size:20pt}
+.p6ph{height:44mm}

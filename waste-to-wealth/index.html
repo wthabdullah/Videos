@@ -9,7 +9,8 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 <svg width="0" height="0" style="position:absolute"><defs>
 <symbol id="bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
 <symbol id="straw" viewBox="0 0 24 24"><path d="M10 21.5V11L14 4.5h4.5" stroke-width="4.2"/><path d="M10 21.5V11L14 4.5h4.5" stroke="#fffdf9" stroke-width="1.8"/><path d="M8.4 13.4h3.2M8.4 15.6h3.2" stroke-width="1"/></symbol>
-<symbol id="cup" viewBox="0 0 24 24"><path d="M5.5 9h13l-1.5 11h-10z"/><path d="M4.5 9h15"/><path d="M12 9V3.5h4"/></symbol>
+<symbol id="cup" viewBox="0 0 24 24"><circle cx="9.5" cy="14" r="7.5"/><circle cx="9.5" cy="14" r="4.2"/><path d="M15.5 4h6l-1.2 10.5h-3.6z"/></symbol>
+<symbol id="xbadge" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9.2" fill="#c62828" stroke="#e9dcc8" stroke-width="1.6"/><path d="M6.6 6.6l6.8 6.8M13.4 6.6l-6.8 6.8" stroke="#fff" stroke-width="2.3" stroke-linecap="round"/></symbol>
 <symbol id="bottle" viewBox="0 0 24 24"><path d="M10 3h4v3l2 3v11a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V9l2-3V3z"/><path d="M8 13h8"/></symbol>
 <symbol id="wrap" viewBox="0 0 24 24"><rect x="7" y="8" width="10" height="8" rx="1.6"/><path d="M7 12L3 9v6l4-3zM17 12l4-3v6l-4-3z"/></symbol>
 <symbol id="cutlery" viewBox="0 0 24 24"><ellipse cx="7.5" cy="7" rx="2.4" ry="3.6"/><path d="M7.5 10.6V21"/><path d="M15 3v4a2.5 2.5 0 0 0 5 0V3"/><path d="M17.5 9.5V21"/></symbol>
@@ -62,12 +63,12 @@ if (document.documentElement.classList.contains('print')) document.write('<style
   <div class="p2bot">
     <div class="fate2"><span class="t">If it is kept apart</span><h2>It becomes something valuable.</h2></div>
     <div class="outs">
-      <div class="it"><div class="ic"><svg class="i"><use href="#sprout"/></svg></div><div><b>Food scraps</b><span>Compost for plants and fields</span></div></div>
-      <div class="it"><div class="ic"><svg class="i"><use href="#paper"/></svg></div><div><b>Paper and card</b><span>Sold, then made into new paper</span></div></div>
-      <div class="it"><div class="ic"><svg class="i"><use href="#can"/></svg></div><div><b>Metal and glass</b><span>Sold, melted and made again</span></div></div>
-      <div class="it"><div class="ic"><svg class="i"><use href="#bottle"/></svg></div><div><b>Plastic</b><span>Sold, shredded and remade</span></div></div>
+      <div class="it"><div class="ic"><svg class="i"><use href="#sprout"/></svg></div><div><b>Food waste</b></div></div>
+      <div class="it"><div class="ic"><svg class="i"><use href="#paper"/></svg></div><div><b>Paper and card</b></div></div>
+      <div class="it"><div class="ic"><svg class="i"><use href="#can"/></svg></div><div><b>Metal and glass</b></div></div>
+      <div class="it"><div class="ic"><svg class="i"><use href="#bottle"/></svg></div><div><b>Plastic</b></div></div>
     </div>
-    <div class="money"><svg class="i"><use href="#cycle"/></svg>Money and compost, instead of rubbish.</div>
+    <div class="money"><svg class="i"><use href="#cycle"/></svg>Rubbish can generate money for us.</div>
   </div>
   <div class="foot even"><span class="n">2</span><span>WASTE TO WEALTH</span></div>
 </div></section>
@@ -84,13 +85,12 @@ if (document.documentElement.classList.contains('print')) document.write('<style
   </div>
   <div class="body">
     <div class="card">
-      <span class="kicker">Before you take a plastic item, circle one</span>
+      <span class="kicker">Before you take a plastic item, stop and think</span>
       <div class="qs" style="margin-top:1mm">
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">1</span><span class="t">Do I need it?</span></div>
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">2</span><span class="t">Does it have to come in this packaging?</span></div>
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">3</span><span class="t">Do I need a new bag or container for it?</span></div>
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">4</span><span class="t">Can I use this item many times?</span></div>
-        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">5</span><span class="t">If I throw it away, can it be recycled locally?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">1</span><span class="t">Do I really need it?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">2</span><span class="t">Does it come in biodegradable packaging?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">3</span><span class="t">Can I use this item many times?</span></div>
+        <div class="r"><span class="yn"><i class="y"><svg class="i"><use href="#tick"/></svg></i><i class="n"><svg class="i"><use href="#cross"/></svg></i></span><span class="num">4</span><span class="t">If I throw it away, can it be recycled locally?</span></div>
       </div>
       <div class="rule1"><b>Any cross?</b> Leave it on the shelf.</div>
     </div>
@@ -98,33 +98,21 @@ if (document.documentElement.classList.contains('print')) document.write('<style
     <div class="refuse">
       <h3>Say no to single-use plastic</h3>
       <div class="icons">
-        <div class="ic"><div class="ring"><svg class="i"><use href="#bag"/></svg></div>Shopping<br>bags</div>
-        <div class="ic"><div class="ring"><svg class="i"><use href="#straw"/></svg></div>Straws</div>
-        <div class="ic"><div class="ring"><svg class="i"><use href="#cup"/></svg></div>Cups and<br>plates</div>
-        <div class="ic"><div class="ring"><svg class="i"><use href="#bottle"/></svg></div>Bottles</div>
-        <div class="ic"><div class="ring"><svg class="i"><use href="#wrap"/></svg></div>Food<br>wrappers</div>
-        <div class="ic"><div class="ring"><svg class="i"><use href="#cutlery"/></svg></div>Spoons and<br>forks</div>
+        <div class="ic"><div class="ring"><svg class="i"><use href="#bag"/></svg><svg class="xb"><use href="#xbadge"/></svg></div>Shopping<br>bags</div>
+        <div class="ic"><div class="ring"><svg class="i"><use href="#bottle"/></svg><svg class="xb"><use href="#xbadge"/></svg></div>Bottles</div>
+        <div class="ic"><div class="ring"><svg class="i"><use href="#cup"/></svg><svg class="xb"><use href="#xbadge"/></svg></div>Cups and<br>plates</div>
+        <div class="ic"><div class="ring"><svg class="i"><use href="#straw"/></svg><svg class="xb"><use href="#xbadge"/></svg></div>Straws</div>
+        <div class="ic"><div class="ring"><svg class="i"><use href="#cutlery"/></svg><svg class="xb"><use href="#xbadge"/></svg></div>Spoons and<br>forks</div>
       </div>
     </div>
 
-    <div class="burn">
-      <div class="smoke"></div>
-      <div>
-        <h3>Don’t burn your rubbish.</h3>
-        <p>The smoke irritates the eyes, nose and throat. Tiny particles go deep into the lungs.</p>
-        <span class="instead">Instead: sort it, sell it, compost it.</span>
+    <div class="hot">
+      <div class="photo hot-ph"></div>
+      <div class="hot-tx">
+        <h3>Don’t put hot food in plastic.</h3>
+        <p>Hot tea, curry or oil in a plastic bag can draw chemicals from the plastic into your food.</p>
+        <span class="instead">Use steel, glass or clay instead.</span>
       </div>
-      <svg class="body-fig" viewBox="0 0 122 92" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="38" cy="15" r="12"/>
-        <path d="M33 27v7M43 27v7"/>
-        <path d="M8 70c0-18 10-28 30-28s30 10 30 28"/>
-        <path d="M38 34v14"/>
-        <path d="M35 50c-9-1-15 6-15 17 0 8 4 12 10 12 4 0 5-3 5-8z"/>
-        <path d="M41 50c9-1 15 6 15 17 0 8-4 12-10 12-4 0-5-3-5-8z"/>
-        <g fill="#ee842a" stroke="none"><circle cx="38" cy="10.5" r="2"/><circle cx="38" cy="19.5" r="2"/><circle cx="38" cy="38" r="2"/><circle cx="29" cy="65" r="2"/></g>
-        <g stroke="#fff" stroke-width=".7" opacity=".8"><path d="M40.4 10.5H80M40.4 19.5H80M40.4 38H80M31.4 65H80"/></g>
-        <g fill="#fff" stroke="none" font-family="BG" font-size="8.4" font-weight="700"><text x="83" y="13.4">Eyes</text><text x="83" y="22.4">Nose</text><text x="83" y="40.9">Throat</text><text x="83" y="67.9">Lungs</text></g>
-      </svg>
     </div>
   </div>
   <div class="foot odd"><span class="n">3</span><span>WASTE TO WEALTH</span></div>
@@ -233,30 +221,25 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 <section class="page dark"><div class="trim">
   <svg class="bl dots-v" data-c="#6d2c5f"></svg>
   <div class="dhead">
-    <span class="eyebrow">From one home to one street</span>
-    <h1>The <em>8-week</em> action plan.</h1>
+    <span class="eyebrow">From one home to one community</span>
+    <h1>Plan of <em>action.</em></h1>
     <p class="sub">A home that sorts has a habit. A street that sorts can ask for sorted collection.</p>
   </div>
   <div class="body p6body">
     <div class="photo p6ph"></div>
     <div class="plan">
       <div class="stg s1"><div class="no">1</div><div class="tx">
-        <div class="top"><h3>Identify</h3><span>Weeks 1–2</span></div>
-        <ul><li>Make a team of young people and community members. Give everyone a responsibility.</li>
-            <li>Find waste collection points, and the recyclable materials common on your street.</li></ul></div></div>
+        <div class="top"><h3>Organise</h3><span>Weeks 1–2</span></div>
+        <ul><li>Make a team of young people and give everyone a responsibility.</li></ul></div></div>
       <div class="stg s2"><div class="no">2</div><div class="tx">
-        <div class="top"><h3>Show</h3><span>Weeks 3–4</span></div>
-        <ul><li>With permission, install bins in the three colours at the collection points.</li>
-            <li>Hold a demonstration: sort a heap of mixed waste in public. Explain everyone’s moral and legal duty to sort.</li></ul></div></div>
+        <div class="top"><h3>Awareness</h3><span>Weeks 3–4</span></div>
+        <ul><li>Identify waste collection points.</li><li>Collect waste separately, sorted into plastic, paper, cardboard, glass, medical waste and e-waste.</li><li>Identify recyclable materials.</li><li>Install bins.</li></ul></div></div>
       <div class="stg s3"><div class="no">3</div><div class="tx">
-        <div class="top"><h3>Coordinate</h3><span>Weeks 5–6</span></div>
-        <ul><li>Contact the local authority and waste collectors. Decide who keeps each area clean.</li>
-            <li>Ask shopkeepers, schools and housing societies for support.</li>
-            <li>Meet scrap dealers and recyclers. Ask about prices and collection.</li></ul></div></div>
+        <div class="top"><h3>Coordination</h3><span>Weeks 5–6</span></div>
+        <ul><li>Contact local authorities and waste collection services.</li><li>Ask shopkeepers, schools and housing societies for support.</li><li>Meet scrap dealers and recycling companies. Ask about prices and collection arrangements.</li></ul></div></div>
       <div class="stg s4"><div class="no">4</div><div class="tx">
-        <div class="top"><h3>Advocate</h3><span>Weeks 7–8</span></div>
-        <ul><li>Campaign for sorted collection, so sorted waste stays sorted in the truck.</li>
-            <li>Ask the municipality, or its contractor, to own waste collection on your street.</li></ul></div></div>
+        <div class="top"><h3>Advocacy</h3><span>Weeks 7–8</span></div>
+        <ul><li>Push for segregated waste collection.</li><li>Use environmental protection laws.</li></ul></div></div>
     </div>
     <div class="m6"><b>Your result:</b> do the 7-day challenge in week 1 and week 8. The difference is what your street changed.</div>
   </div>
