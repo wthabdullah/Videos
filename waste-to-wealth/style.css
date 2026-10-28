@@ -517,3 +517,60 @@ svg.fork{display:block;width:100%;height:7mm;margin:-.2mm 0 -1mm}
 .qs .num{padding-top:.32mm}
 .icons .ring{font-size:20pt}
 .p6ph{height:44mm}
+/* page 3: hot food box, v2 */
+.hot{grid-template-columns:62mm 1fr;background:var(--plum)}
+.hot-ph{position:relative;background-image:url(img/hot-food.png);background-position:42% 45%;min-height:0}
+.hot .warn{position:absolute;left:2.6mm;top:2.6mm;background:var(--red);color:#fff;font-weight:800;font-size:7.2pt;letter-spacing:.12em;text-transform:uppercase;padding:1.1mm 2.4mm;border-radius:1.2mm}
+.hot-tx{padding:3.6mm 4.6mm;justify-content:center}
+.hot .hk{font-size:6.8pt;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--orange);margin-bottom:1mm}
+.hot h3{font-size:12.6pt;margin-bottom:1.6mm}
+.hot p{font-size:8.7pt;line-height:1.34}
+.hot .use{margin-top:2.6mm;display:flex;align-items:center;gap:1.6mm;flex-wrap:wrap}
+.hot .use b{font-size:6.8pt;letter-spacing:.12em;text-transform:uppercase;color:#f1dcea;margin-right:.6mm}
+.hot .use span{display:flex;align-items:center;gap:1.1mm;background:#fff;color:var(--plum);font-weight:800;font-size:8pt;padding:.8mm 2.2mm .8mm .8mm;border-radius:4mm}
+.hot .use i{width:5.4mm;height:5.4mm;border-radius:50%;background:var(--otint);color:var(--orange-d);display:flex;align-items:center;justify-content:center;font-size:9.5pt}
+/* page 3 fit */
+.page.step:nth-of-type(3) .body{gap:2.4mm}
+.page.step:nth-of-type(3) .card{padding:3.4mm 5mm}
+.qs .r{padding:1.35mm 0}
+.qs .t{font-size:10.2pt}
+.rule1{margin-top:1.2mm;padding:1.8mm 3.4mm}
+.refuse{padding:2.8mm 5mm 3mm}
+.refuse h3{margin-bottom:2mm;font-size:11pt}
+.icons .ring{width:11mm;height:11mm;font-size:18pt}
+.hot{grid-template-columns:52mm 1fr}
+.hot-ph{background-position:45% 45%}
+.hot-tx{padding:3.2mm 4.4mm}
+.hot .hk{margin-bottom:.6mm}
+.hot h3{font-size:11.6pt;margin-bottom:1.2mm}
+.hot p{font-size:8.5pt;line-height:1.32}
+.hot .use-l{display:block;margin-top:2.2mm;margin-bottom:1.2mm;font-size:6.8pt;letter-spacing:.12em;text-transform:uppercase;color:#f1dcea}
+.hot .use{margin-top:0;flex-wrap:nowrap}
+.cover .pic{background-position:40% 60%}
+/* hot food box: polish */
+.hot{position:relative;grid-template-columns:54mm 1fr;box-shadow:0 .6mm 0 rgba(93,22,77,.18)}
+.hot-deco{position:absolute;right:-12mm;top:-14mm;width:40mm;height:40mm;border-radius:50%;border:.35mm dashed rgba(255,255,255,.22);pointer-events:none;z-index:0}
+.hot-ph{box-shadow:inset -.8mm 0 0 var(--orange)}
+.hot-tx{position:relative;z-index:1}
+.hot h3{font-size:12.8pt;letter-spacing:-.015em}
+.hot p strong{display:block;margin-top:1mm;color:var(--orange);font-weight:800;font-size:9.4pt}
+.hot .use{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6mm}
+.hot .use span{justify-content:flex-start;font-size:8.6pt;padding:.9mm 2mm .9mm .9mm}
+.hot .use i{width:6mm;height:6mm;font-size:10.5pt}
+.hot .warn{box-shadow:0 .4mm 1.2mm rgba(0,0,0,.25)}
+/* hot food box: polish */
+.hot{position:relative;grid-template-columns:54mm 1fr;box-shadow:0 .6mm 0 rgba(93,22,77,.18)}
+.hot-deco{position:absolute;right:-12mm;top:-14mm;width:40mm;height:40mm;border-radius:50%;border:.35mm dashed rgba(255,255,255,.22);pointer-events:none;z-index:0}
+.hot-ph{box-shadow:inset -.8mm 0 0 var(--orange)}
+.hot-tx{position:relative;z-index:1}
+.hot h3{font-size:12.8pt;letter-spacing:-.015em}
+.hot p strong{display:block;margin-top:1mm;color:var(--orange);font-weight:800;font-size:9.4pt}
+.hot .use{display:grid;grid-template-columns:repeat(2,max-content);gap:1.8mm}
+.hot .use span{font-size:8.8pt;padding:.9mm 3mm .9mm .9mm}
+.hot .use i{width:6mm;height:6mm;font-size:10.5pt}
+.hot .warn{box-shadow:0 .4mm 1.2mm rgba(0,0,0,.25)}
+.hot-tx{padding:2.8mm 4.4mm}
+.hot h3{font-size:12.2pt;margin-bottom:1mm}
+.hot p{font-size:8.4pt}
+.hot p strong{font-size:9pt;margin-top:.8mm}
+.hot .use-l{margin-top:1.8mm;margin-bottom:1mm}

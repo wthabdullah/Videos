@@ -24,6 +24,8 @@ if (document.documentElement.classList.contains('print')) document.write('<style
 <symbol id="house" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/></symbol>
 <symbol id="camera" viewBox="0 0 24 24"><path d="M3 8h4l2-3h6l2 3h4v11H3z"/><circle cx="12" cy="13" r="3.6"/></symbol>
 <symbol id="tear-b" viewBox="0 0 148 3.6" preserveAspectRatio="none"><path d="M0 0 L0 1.51 L2.7 2.42 L5.1 2.1 L8.5 0.76 L12.4 0.7 L16.0 0.8 L18.5 1.79 L23.5 0.95 L26.4 2.36 L31.7 2.22 L35.3 3.33 L37.6 3.0 L40.8 1.0 L43.3 1.46 L48.2 1.11 L52.4 2.39 L55.8 2.13 L58.2 0.77 L61.1 2.51 L64.7 1.48 L68.8 1.87 L72.0 2.82 L76.5 1.28 L80.6 2.07 L85.7 2.64 L88.8 3.34 L91.4 1.77 L96.1 1.03 L100.0 0.71 L104.4 2.74 L108.4 3.05 L111.7 2.55 L115.8 2.22 L119.5 2.95 L124.9 1.93 L129.3 0.77 L133.8 2.41 L139.3 2.9 L142.4 1.68 L146.8 0.66 L148 1.8 L148 0Z"/></symbol>
+<symbol id="tiffin" viewBox="0 0 24 24"><rect x="6" y="8" width="12" height="4.3" rx="1"/><rect x="6" y="12.3" width="12" height="4.3" rx="1"/><rect x="6" y="16.6" width="12" height="4.4" rx="1"/><path d="M9 8V4.5h6V8"/></symbol>
+<symbol id="jar" viewBox="0 0 24 24"><path d="M8 3.5h8v3H8z"/><path d="M8 6.5v12.5a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V6.5"/><path d="M8 11h8"/></symbol>
 </defs></svg>
 
 <!-- ============ PAGE 1: COVER ============ -->
@@ -107,11 +109,16 @@ if (document.documentElement.classList.contains('print')) document.write('<style
     </div>
 
     <div class="hot">
-      <div class="photo hot-ph"></div>
+      <div class="photo hot-ph"><span class="warn">Hot + plastic</span></div>
       <div class="hot-tx">
-        <h3>Don’t put hot food in plastic.</h3>
-        <p>Hot tea, curry or oil in a plastic bag can draw chemicals from the plastic into your food.</p>
-        <span class="instead">Use steel, glass or clay instead.</span>
+        <span class="hk">Your health</span>
+        <h3>Never put hot food in plastic.</h3>
+        <p>Heat draws chemicals out of plastic bags and foam boxes into your chai and food. <strong>They can raise your risk of cancer.</strong></p>
+        <b class="use-l">Use instead</b>
+        <div class="use">
+          <span><i><svg class="i"><use href="#tiffin"/></svg></i>Steel</span>
+          <span><i><svg class="i"><use href="#jar"/></svg></i>Glass</span>
+        </div>
       </div>
     </div>
   </div>
