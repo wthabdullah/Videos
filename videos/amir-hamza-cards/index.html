@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<script src="gsap.min.js"></script>
+<style>
+@font-face{font-family:Archivo;src:url(assets/fonts/archivo.woff2) format("woff2");font-weight:100 900;font-display:block}
+@font-face{font-family:"Space Mono";src:url(assets/fonts/spacemono.woff2) format("woff2");font-weight:700;font-display:block}
+@font-face{font-family:Nastaliq;src:url(assets/fonts/nastaliq.woff2) format("woff2");font-weight:500;font-display:block}
+@font-face{font-family:Inter;src:url(assets/fonts/inter.woff2) format("woff2");font-weight:100 900;font-display:block}
+:root{--plum:#550e48;--mag:#ab2692;--orange:#f08a2e;--cream:#f6efe8}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:480px;height:854px;overflow:hidden;background:transparent}
+#stage{position:relative;width:480px;height:854px;overflow:hidden}
+.abs{position:absolute}
+/* ---- top logo bar (the overlay) ---- */
+#bar{position:absolute;left:0;top:0;width:480px;height:112px;background:#fff;box-shadow:0 4px 14px rgba(40,0,30,.18);z-index:20}
+#bar img{position:absolute}
+#bar .vso{left:24px;top:52px;height:44px}
+#bar .fcdo{left:330px;top:58px;height:38px}
+#bar .pill{position:absolute;left:161px;top:63px;width:158px;height:26px;border-radius:13px;background:linear-gradient(90deg,#8a1f7c,#b52a9c);color:#fff;font:700 10.5px/26px "Space Mono";letter-spacing:.12em;text-align:center;box-shadow:0 3px 6px rgba(80,0,70,.3)}
+#bar .pill i{color:var(--orange);font-style:normal;margin-right:5px}
+.spark{position:absolute;fill:var(--orange)}
+/* ---- start ---- */
+#start{position:absolute;inset:0;background:radial-gradient(circle at 50% 38%,#6c1560 0%,#5e124d 45%,#3b0a31 100%)}
+#ring{position:absolute;left:240px;top:427px;width:36px;height:36px;margin:-18px 0 0 -18px;border:1.5px solid var(--orange);border-radius:50%}
+#blob{position:absolute;left:33px;top:279px;width:414px;height:296px;border-radius:50%;background:radial-gradient(ellipse at 50% 40%,#b22a98,#a0268a 70%,#8c2079);box-shadow:0 14px 40px rgba(20,0,16,.45)}
+#pres{position:absolute;left:0;width:480px;top:316px;text-align:center;font:700 12.5px "Space Mono";letter-spacing:.22em;color:#fff}
+#big1,#big2{position:absolute;left:0;width:480px;text-align:center;color:#fff;font-family:Archivo;font-weight:900;text-transform:uppercase;line-height:1}
+#big1{top:344px;font-size:78px;letter-spacing:-.01em}
+#big2{top:418px;font-size:53px;letter-spacing:-.005em}
+#urdu{position:absolute;left:0;width:480px;top:484px;text-align:center;color:#fff;font:500 26px/1.6 Nastaliq}
+#with{position:absolute;left:120px;top:602px;width:240px;height:43px;border-radius:22px;background:var(--cream);box-shadow:0 8px 18px rgba(20,0,16,.35);text-align:center;font:500 21px/43px Inter;color:var(--mag);white-space:nowrap}
+#with b{font-weight:700;color:var(--plum)}
+.w{display:inline-block}
+/* ---- end ---- */
+#end{position:absolute;inset:0;background:var(--cream)}
+#t1,#t2{position:absolute;left:38px;font:900 66px/1 Archivo;letter-spacing:-.02em;white-space:nowrap}
+#t1{top:271px;color:var(--plum)}
+#t2{top:343px;background:linear-gradient(90deg,#8d2183,#bb2fa3);-webkit-background-clip:text;color:transparent;padding-right:6px}
+#who{position:absolute;left:38px;top:427px;font:700 13.5px "Space Mono";letter-spacing:.17em;color:var(--plum);white-space:nowrap}
+#follow{position:absolute;left:36px;top:463px;width:312px;height:46px;border-radius:23px;background:var(--orange);box-shadow:0 8px 16px rgba(240,138,46,.35);color:var(--plum);font:700 22px/46px Inter;padding-left:47px;white-space:nowrap}
+#follow .pl{position:absolute;left:8px;top:7px;width:32px;height:32px;border-radius:50%;background:var(--plum);color:#fff;font:700 22px/31px Inter;text-align:center}
+#more{position:absolute;left:38px;top:522px;font:500 17px Inter;color:#4a2a45}
+#tag{position:absolute;left:38px;top:557px;font:700 14px "Space Mono";letter-spacing:.06em;color:var(--mag)}
+#endlogos{mix-blend-mode:multiply}#endlogos img{position:absolute}
+body.bar-only #stage>*:not(#bar){display:none}
+body.bar-only{background:transparent}
+</style></head>
+<body>
+<div id="stage">
+
+  <div id="start">
+    <div id="ring"></div>
+    <svg class="spark" id="sp1" viewBox="-50 -50 100 100" style="left:378px;top:248px;width:52px;height:52px"><path d="M0-48C4-14 14-4 48 0 14 4 4 14 0 48-4 14-14 4-48 0-14-4-4-14 0-48Z"/></svg>
+    <svg class="spark" id="sp2" viewBox="-50 -50 100 100" style="left:433px;top:325px;width:22px;height:22px"><path d="M0-48C4-14 14-4 48 0 14 4 4 14 0 48-4 14-14 4-48 0-14-4-4-14 0-48Z"/></svg>
+    <svg class="spark" id="sp3" viewBox="-50 -50 100 100" style="left:40px;top:528px;width:30px;height:30px"><path d="M0-48C4-14 14-4 48 0 14 4 4 14 0 48-4 14-14 4-48 0-14-4-4-14 0-48Z"/></svg>
+    <svg class="spark" id="sp4" viewBox="-50 -50 100 100" style="left:79px;top:570px;width:14px;height:14px"><path d="M0-48C4-14 14-4 48 0 14 4 4 14 0 48-4 14-14 4-48 0-14-4-4-14 0-48Z"/></svg>
+    <div id="blob"></div>
+    <div id="pres">VOLUNTEER DIARIES PRESENTS</div>
+    <div id="big1">STORIES</div>
+    <div id="big2">OF CHANGE</div>
+    <div id="urdu">تبدیلی کی کہانیاں</div>
+    <div id="with">with <b>Amir Hamza</b></div>
+  </div>
+
+  <div id="end">
+    <svg class="spark" id="e1" viewBox="-50 -50 100 100" style="left:362px;top:237px;width:68px;height:68px"><path d="M0-48C4-14 14-4 48 0 14 4 4 14 0 48-4 14-14 4-48 0-14-4-4-14 0-48Z"/></svg>
+    <svg class="spark" id="e2" viewBox="-50 -50 100 100" style="left:430px;top:320px;width:20px;height:20px"><path d="M0-48C4-14 14-4 48 0 14 4 4 14 0 48-4 14-14 4-48 0-14-4-4-14 0-48Z"/></svg>
+    <div id="t1">Stories</div><div id="t2">of Change</div>
+    <div id="who">WITH AMIR HAMZA, VSO VOLUNTEER</div>
+    <div id="follow"><span class="pl">+</span>Follow @vsopakistan</div>
+    <div id="more">for more volunteer stories</div>
+    <div id="tag">#PassTheSpark</div>
+    <div id="endlogos">
+      <img class="vso" src="assets/logos/vso.png" style="left:36px;top:618px;height:66px">
+      <img class="fcdo" src="assets/logos/fcdo.png" style="left:216px;top:622px;height:56px">
+    </div>
+  </div>
+
+  <div id="bar">
+    <img class="vso" src="assets/logos/vso.png">
+    <div class="pill"><i>✦</i>VOLUNTEER DIARIES</div>
+    <img class="fcdo" src="assets/logos/fcdo.png">
+  </div>
+</div>
+<script>
+const q=new URLSearchParams(location.search), scene=q.get('scene')||'start';
+document.getElementById('start').style.display=scene==='start'?'block':'none';
+document.getElementById('end').style.display=scene==='end'?'block':'none';
+if(scene==='bar'){document.body.classList.add('bar-only')}
+const tl=gsap.timeline({paused:true});
+const ease='power3.out', back='back.out(1.6)';
+if(scene==='start'){
+  const w=1;
+  gsap.set(['#blob','#pres','#big1','#big2','#urdu','#with','#bar','.spark'],{opacity:0});
+  gsap.set('#blob',{scale:.25});
+  tl.fromTo('#ring',{scale:.2,opacity:0},{scale:7,opacity:1,duration:.7,ease:'power2.out'},0)
+    .to('#ring',{opacity:0,duration:.35},.55)
+    .to('#bar',{opacity:1,duration:.4},.25)
+    .to('#blob',{opacity:1,scale:1,duration:.75,ease:'expo.out'},.35)
+    .fromTo('#pres',{opacity:0,y:8,letterSpacing:'.5em'},{opacity:1,y:0,letterSpacing:'.22em',duration:.6,ease},.85)
+    .fromTo('#big1',{opacity:0,y:34,scale:.9},{opacity:1,y:0,scale:1,duration:.55,ease:back},.95)
+    .fromTo('#big2',{opacity:0,y:28,scale:.92},{opacity:1,y:0,scale:1,duration:.5,ease:back},1.1)
+    .fromTo('#urdu',{opacity:0,y:10},{opacity:1,y:0,duration:.45,ease},1.3)
+    .fromTo('#with',{opacity:0,y:22,scale:.9},{opacity:1,y:0,scale:1,duration:.5,ease:back},1.5)
+    .fromTo('.spark',{opacity:0,scale:0,rotation:-90},{opacity:1,scale:1,rotation:0,duration:.5,ease:back,stagger:.1},1.2);
+  ['#sp1','#sp2','#sp3','#sp4'].forEach((s,i)=>tl.to(s,{scale:1.18,duration:.6,yoyo:true,repeat:3,ease:'sine.inOut'},1.8+i*.15));
+  tl.to({}, {duration:.01}, 3.0);
+}
+if(scene==='end'){
+  gsap.set(['#t1','#t2','#who','#follow','#more','#tag','#endlogos','#bar','.spark'],{opacity:0});
+  tl.to('#bar',{opacity:1,duration:.01},0)
+    .fromTo('#t1',{opacity:0,x:-30},{opacity:1,x:0,duration:.55,ease},.1)
+    .fromTo('#t2',{opacity:0,x:-30},{opacity:1,x:0,duration:.55,ease},.25)
+    .fromTo('.spark',{opacity:0,scale:0,rotation:-90},{opacity:1,scale:1,rotation:0,duration:.5,ease:back,stagger:.12},.5)
+    .fromTo('#who',{opacity:0,y:10},{opacity:1,y:0,duration:.45,ease},.7)
+    .fromTo('#follow',{opacity:0,y:16,scale:.94},{opacity:1,y:0,scale:1,duration:.5,ease:back},.95)
+    .fromTo('#more',{opacity:0,y:8},{opacity:1,y:0,duration:.4,ease},1.2)
+    .fromTo('#tag',{opacity:0,y:8},{opacity:1,y:0,duration:.4,ease},1.35)
+    .fromTo('#endlogos',{opacity:0,y:14},{opacity:1,y:0,duration:.5,ease},1.6);
+  ['#e1','#e2'].forEach((s,i)=>tl.to(s,{scale:1.15,rotation:20,duration:.8,yoyo:true,repeat:4,ease:'sine.inOut'},1.4+i*.2));
+}
+if(scene==='bar'){gsap.set('#bar',{opacity:1})}
+window.seek=t=>{tl.seek(t,false);return true};
+</script>
+</body></html>
