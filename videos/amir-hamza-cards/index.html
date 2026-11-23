@@ -104,7 +104,10 @@ if(scene==='start'){
     .fromTo('#with',{opacity:0,y:22,scale:.9},{opacity:1,y:0,scale:1,duration:.5,ease:back},1.5)
     .fromTo('.spark',{opacity:0,scale:0,rotation:-90},{opacity:1,scale:1,rotation:0,duration:.5,ease:back,stagger:.1},1.2);
   ['#sp1','#sp2','#sp3','#sp4'].forEach((s,i)=>tl.to(s,{scale:1.18,duration:.6,yoyo:true,repeat:3,ease:'sine.inOut'},1.8+i*.15));
-  tl.to({}, {duration:.01}, 3.0);
+  // gentle exit: content drifts up and softens away, ring of light closes, bar stays
+  tl.to(['#pres','#big1','#big2','#urdu','#with','.spark'],{opacity:0,y:-14,duration:.7,ease:'power2.inOut',stagger:.05},2.55)
+    .to('#blob',{opacity:0,scale:1.08,duration:.8,ease:'power2.inOut'},2.6)
+    .to({}, {duration:.01}, 3.5);
 }
 if(scene==='end'){
   gsap.set(['#t1','#t2','#who','#follow','#more','#tag','#endlogos','#bar','.spark'],{opacity:0});
